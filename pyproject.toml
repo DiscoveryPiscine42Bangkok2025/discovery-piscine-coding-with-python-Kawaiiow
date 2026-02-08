@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "dp-python-testcase"
+version = "0.1.0"
+description = ""
+authors = ["Kawaiiow <poohsn1357@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pytest = "^9.0.2"
+
+[tool.poetry.group.dev.dependencies]
+pytest-cov = "^7.0.0"
+pytest-mock = "^3.15.1"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-r f --tb=no"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
