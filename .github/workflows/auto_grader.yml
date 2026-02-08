@@ -27,4 +27,12 @@ jobs:
         run: poetry install --no-root
 
       - name: Run tests
-        run: poetry run pytest
+        run: poetry run pytest --junitxml=report.xml
+
+      - name: Publish Test Report
+        uses: dorny/test-reporter@v1
+        if: always()
+        with:
+          name: Pytest Results
+          path: report.xml
+          reporter: java-junit
