@@ -16,7 +16,7 @@ pytest-mock = "^3.15.1"
 [tool.pytest.ini_options]
 pythonpath = ["."]
 testpaths = ["tests"]
-addopts = "-r f --tb=no"
+addopts = "--tb=no"
 
 [build-system]
 requires = ["poetry-core"]
